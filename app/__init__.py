@@ -14,7 +14,6 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
 
-from app import routes, models, errors
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
@@ -44,3 +43,5 @@ if not app.debug:
 
     app.logger.setLevel(logging.INFO)
     app.logger.info('Blog startup')
+
+from app import routes, models, errors
